@@ -2,7 +2,7 @@ import os
 from setuptools import setup, find_packages
 
 version_ns = {}
-with open(os.path.join("funcx_endpoint", "version.py")) as f:
+with open(os.path.join("funcx", "ep_version.py")) as f:
     exec(f.read(), version_ns)
 version = version_ns['VERSION']
 
@@ -13,7 +13,7 @@ setup(
     name='funcx-endpoint-tando-test',
     version=version,
     packages=find_packages(),
-    description='funcX: High Performance Function Serving for Science',
+    description='test funcx endpoint submodule',
     install_requires=install_requires,
     python_requires=">=3.6.0",
     classifiers=[
@@ -30,15 +30,9 @@ setup(
         "FaaS",
         "Function Serving"
     ],
-    entry_points={'console_scripts':
-                  ['funcx-endpoint=funcx.endpoint.endpoint:cli_run',
-                   'funcx-interchange=funcx.executors.high_throughput.interchange:cli_run',
-                   'funcx-manager=funcx.executors.high_throughput.funcx_manager:cli_run',
-                   'funcx-worker=funcx.executors.high_throughput.funcx_worker:cli_run',
-                  ]
-    },
+    entry_points={},
     author='funcX team',
     author_email='labs@globus.org',
     license="Apache License, Version 2.0",
-    url="https://github.com/funcx-faas/funcx-endpoint"
+    url="https://github.com/theodore-ando/test-pep420"
 )

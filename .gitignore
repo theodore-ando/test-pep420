@@ -1,1 +1,8 @@
 .idea/
+
+*/build/
+*/dist/
+*/funcx_endpoint_tando_test.egg-info/
+*/*.egg-info/
+
+__pycache__/
